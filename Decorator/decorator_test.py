@@ -21,3 +21,13 @@ def sum(x,y):
     print(x+y)
 
 sum(4,7)
+
+
+
+'''
+examples for decorator:
+
+login_required
+permission_required
+cache
+'''
