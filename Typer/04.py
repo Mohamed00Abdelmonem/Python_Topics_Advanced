@@ -14,3 +14,12 @@ def calc(salary:int, employee:bool=False):
 
 if __name__== "__main__":
     app()
+
+
+'''
+Notes : 
+for out write 
+1- python 04.py 100    this for employee = false 
+2- python 04.py 100 --employee    this for employee-true 
+'''
+    
