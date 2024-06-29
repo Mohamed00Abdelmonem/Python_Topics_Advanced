@@ -258,3 +258,4 @@ app = typer.Typer()
 # تعريف أمر بخيار
 @app.command()
 def calc(salary
+```
