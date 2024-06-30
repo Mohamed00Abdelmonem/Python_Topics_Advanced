@@ -66,7 +66,7 @@ class Person:
         self.name = name 
         self.age = age
 
-    def __str__(self):
+    def __str__(self):   # for edit format string 
         return f'Person = ( name - {self.name} , age - {self.age})'
     
     def __gt__(self, other):
@@ -96,12 +96,12 @@ print(p1 > p2)
 ```python
 from dataclasses import dataclass
 
-@dataclass(order=True)
+@dataclass(order=True)  # add this line for Decorator  and add order for < or > or = or <= or etc .... 
 class Person:
     name: str
     age: int
 
-    def __str__(self) -> str:
+    def __str__(self) -> str:  # for edit format string 
         return self.name
 
 p1 = Person(21, 'mohamed')
@@ -115,5 +115,4 @@ print(p1 > p2)
 1. **الديكورتر `@dataclass(order=True)`**: الديكورتر `@dataclass` يقوم تلقائيًا بإنشاء دوال `__init__`، `__repr__`، `__eq__`، `__lt__`، `__le__`، `__gt__`، و `__ge__`. المعامل `order=True` يسمح بمقارنة الكائنات بناءً على ترتيب الخصائص.
 2. **تمثيل النص (`__str__` method)**: تم تجاوز هذه الطريقة لإرجاع فقط اسم الكائن `Person`.
 3. **المقارنة**: يتم مقارنة الكائنين `p1` و `p2`. المقارنة تعتمد على ترتيب الخصائص. نظرًا لأن خاصية `age` هي الثانية في هذه الحالة، يتم مقارنة الكائنات بناءً على `age`. لذا `p1 > p2` ستعيد `False` لأن 21 أصغر من 23.
-```
 
